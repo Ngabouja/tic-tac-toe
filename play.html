@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="style2.css" />
+		<title>Tic Tac Toe</title>
+		<style class="hoverstyle"></style>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<span class="logo">
+					<svg
+						width="32"
+						height="32"
+						viewBox="0 0 32 32"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M27.681 1.63437C26.5094 0.462798 24.6099 0.4628 23.4383 1.63437L16 9.07271L8.56166 1.63437C7.39009 0.462798 5.49059 0.4628 4.31902 1.63437L1.63437 4.31902C0.462799 5.49059 0.462801 7.39009 1.63437 8.56166L9.07271 16L1.63437 23.4383C0.462798 24.6099 0.4628 26.5094 1.63437 27.681L4.31902 30.3656C5.49059 31.5372 7.39009 31.5372 8.56166 30.3656L16 22.9273L23.4383 30.3656C24.6099 31.5372 26.5094 31.5372 27.681 30.3656L30.3656 27.681C31.5372 26.5094 31.5372 24.6099 30.3656 23.4383L22.9273 16L30.3656 8.56166C31.5372 7.39009 31.5372 5.49059 30.3656 4.31902L27.681 1.63437Z"
+							fill="currentColor"
+						/>
+					</svg>
+					<svg
+						width="32"
+						height="32"
+						viewBox="0 0 32 32"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M31.9704 15.8706C31.9704 7.10551 24.8649 0 16.0998 0C7.33476 0 0.229248 7.10551 0.229248 15.8706C0.229248 24.6357 7.33476 31.7412 16.0998 31.7412C24.8649 31.7412 31.9704 24.6357 31.9704 15.8706ZM9.63405 15.8706C9.63405 12.2996 12.5289 9.4048 16.0998 9.4048C19.6708 9.4048 22.5656 12.2996 22.5656 15.8706C22.5656 19.4416 19.6708 22.3364 16.0998 22.3364C12.5289 22.3364 9.63405 19.4416 9.63405 15.8706Z"
+							fill="currentColor"
+						/>
+					</svg>
+				</span>
+				<div class="turn">
+					<div class="turnsvg"></div>
+					TURN
+				</div>
+				<button class="restart">
+					<svg
+						width="16"
+						height="16"
+						viewBox="0 0 16 16"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M15.3262 0.307617H13.8799C13.6778 0.307402 13.5137 0.471187 13.5135 0.673494C13.5135 0.679433 13.5136 0.685371 13.5139 0.69131L13.6359 3.21755C12.2 1.52436 10.0921 0.549371 7.87288 0.551802C3.70405 0.551833 0.304573 3.95626 0.307619 8.12783C0.310665 12.3061 3.69673 15.6922 7.87288 15.6922C9.7462 15.6949 11.5534 14.9994 12.9422 13.7414C13.0928 13.6064 13.1057 13.3749 12.9708 13.2241C12.9663 13.2191 12.9616 13.2141 12.9568 13.2093L11.9197 12.1715C11.7835 12.0352 11.565 12.0279 11.42 12.1547C9.19383 14.1146 5.80137 13.8975 3.84273 11.6699C1.88408 9.4422 2.101 6.04752 4.32719 4.08762C6.55337 2.12771 9.94583 2.34475 11.9045 4.57242C12.058 4.74703 12.2 4.93143 12.3297 5.12445L9.23251 4.9758C9.03057 4.9662 8.85906 5.1222 8.84946 5.32429C8.84918 5.33023 8.84903 5.33617 8.84906 5.34211V6.78931C8.84906 6.99161 9.01294 7.15561 9.21512 7.15561H15.3262C15.5284 7.15561 15.6923 6.99161 15.6923 6.78931V0.673925C15.6922 0.471617 15.5283 0.307617 15.3262 0.307617Z"
+							fill="currentColor"
+						/>
+					</svg>
+				</button>
+			</nav>
+		</header>
+		<main>
+			<div class="grid">
+				<button></button>
+				<button></button>
+				<button></button>
+				<button></button>
+				<button></button>
+				<button></button>
+				<button></button>
+				<button></button>
+				<button></button>
+			</div>
+			<div class="stats">
+				<div class="statsx">
+					<div id="xs">X (P2)</div>
+					<div class="value">0</div>
+				</div>
+				<div class="statsties">
+					<div id="ties">TIES</div>
+					<div class="value">0</div>
+				</div>
+				<div class="statso">
+					<div id="os">O (P2)</div>
+					<div class="value">0</div>
+				</div>
+			</div>
+			<div class="xwon">
+				<div>
+					<p>Player x wins!</p>
+					<h2>
+						<svg
+							width="32"
+							height="32"
+							viewBox="0 0 32 32"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M27.681 1.63437C26.5094 0.462798 24.6099 0.4628 23.4383 1.63437L16 9.07271L8.56166 1.63437C7.39009 0.462798 5.49059 0.4628 4.31902 1.63437L1.63437 4.31902C0.462799 5.49059 0.462801 7.39009 1.63437 8.56166L9.07271 16L1.63437 23.4383C0.462798 24.6099 0.4628 26.5094 1.63437 27.681L4.31902 30.3656C5.49059 31.5372 7.39009 31.5372 8.56166 30.3656L16 22.9273L23.4383 30.3656C24.6099 31.5372 26.5094 31.5372 27.681 30.3656L30.3656 27.681C31.5372 26.5094 31.5372 24.6099 30.3656 23.4383L22.9273 16L30.3656 8.56166C31.5372 7.39009 31.5372 5.49059 30.3656 4.31902L27.681 1.63437Z"
+								fill="#31C3BD"
+							/>
+						</svg>
+						takes the round
+					</h2>
+					<div class="actions">
+						<button class="quit">QUIT</button>
+						<button class="nextround">NEXT ROUND</button>
+					</div>
+				</div>
+			</div>
+			<div class="owon">
+				<div>
+					<p>Player o wins!</p>
+					<h2>
+						<svg
+							width="32"
+							height="32"
+							viewBox="0 0 32 32"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M31.9704 15.8706C31.9704 7.10551 24.8649 0 16.0998 0C7.33476 0 0.229248 7.10551 0.229248 15.8706C0.229248 24.6357 7.33476 31.7412 16.0998 31.7412C24.8649 31.7412 31.9704 24.6357 31.9704 15.8706ZM9.63405 15.8706C9.63405 12.2996 12.5289 9.4048 16.0998 9.4048C19.6708 9.4048 22.5656 12.2996 22.5656 15.8706C22.5656 19.4416 19.6708 22.3364 16.0998 22.3364C12.5289 22.3364 9.63405 19.4416 9.63405 15.8706Z"
+								fill="#F2B137"
+							/>
+						</svg>
+						takes the round
+					</h2>
+					<div class="actions">
+						<button class="quit">QUIT</button>
+						<button class="nextround">NEXT ROUND</button>
+					</div>
+				</div>
+			</div>
+			<div class="tie">
+				<div>
+					<h2>RESTART GAME?</h2>
+					<div class="actions">
+						<button class="quit">NO, CANCEL</button>
+						<button class="nextround">YES, RESTART</button>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Outfit:100,200,300,regular,500,600,700,800,900);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #A8BFC9;
+    font-family: "Outfit";
+    text-transform: uppercase;
+}
+
+.logo svg:first-child path {
+    fill: #31C3BD;
+}
+
+.logo svg:last-child path {
+    fill: #F2B137;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #1A2A33;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100vh;
+    max-width: 320px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.play {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.menu-1 * {
+    text-align: center;
+}
+
+.menu-1 {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: #1F3641;
+    padding: 24px;
+    gap: 16px;
+    width: 100%;
+    box-shadow: 0px -8px 0px 0px #10212A inset;
+}
+
+.menu-2 {
+    padding: 8px;
+    display: flex;
+    background-color: #1A2A33;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.menu-2 > * {
+    width: 100%;
+    padding: 4px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-2 .selected {
+    background-color: #A8BFC9;
+}
+
+.menu-2 .selected path {
+    fill: #1A2A33;
+}
+
+.play a {
+    border: none; 
+    border-radius: 8px;
+    padding: 12px 32px 12px 32px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.play a:first-child {
+    background-color: #F2B137;
+    box-shadow: 0px 8px 0px 0px #CC8B13;
+}
+
+.play a:last-child {
+    background-color: #31C3BD;
+    box-shadow: 0px 8px 0px 0px #118C87;
+}
+
+.play a {
+    color: #1A2A33;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
